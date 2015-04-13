@@ -1,6 +1,10 @@
 #include "Clock.h"
 
-Clock::Clock(){setStart(0);}
+Clock::Clock()
+{
+    setStart(0);
+}
+
 Clock::Clock(clock_t s)
 {
     setStart(s);
@@ -23,6 +27,6 @@ clock_t Clock::getStart()
 
 double Clock::getElapsedTime() 
 {
-    return static_cast<double>(clock()-getStart());
+   return static_cast<double>(clock()-getStart())/CLOCKS_PER_SEC ; 
 }
 

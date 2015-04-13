@@ -5,33 +5,35 @@ question_a:
 ------------------------------------------------------------------
 question_b:
 
-result:
+結果:
 
-Size:1000
-sort():0seconds
+size: 1000
+sort(): 0 clocks
 v1/v2 are different.
-insertion_sort():0.02seconds
+insertion_sort():   0.01 seconds
 v1/v2 are the same.
 
-Size:10000
-sort():0seconds
+
+size: 10000
+sort(): 0 clocks
 v1/v2 are different.
-insertion_sort():1.33seconds
+insertion_sort():   1.28 seconds
 v1/v2 are the same.
 
-Size:100000
-sort():0.04seconds
+
+size: 100000
+sort(): 0.04 clocks
 v1/v2 are different.
-insertion_sort():128.2seconds
+insertion_sort():   128.2 seconds
 v1/v2 are the same.
 
-Size:1000000
-sort():0.5seconds
+size: 1000000
+sort(): 0.5 clocks
 v1/v2 are different.
 
 
 
-explain:
+程式說明:
 
 若有N個數排要排大小
 函數sort比序次數為nlogn次 

@@ -3,8 +3,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "Clock.h"
-#include<fstream>
-#include<iomanip>
+
 using namespace std;
 
 void insertion_sort(vector<int>&v)
@@ -27,15 +26,19 @@ void insertion_sort(vector<int>&v)
  int main()
  {
      Clock clk;
-     const int size = 1000;
+     const int size = 1000000;
      vector<int> v1(size),v2; 
      srandom(time(NULL));
      
      for(int i=0; i<size; ++i)
         v1.at(i)=random();
-        v2 = v1; clk.start();
+
+        v2 = v1;
+	
+	cout <<"size: "<<size << endl;
+	clk.start();
         
-        sort(v1.begin(), v1.end());
+	sort(v1.begin(), v1.end());
         
         cout << "sort(): " << clk.getElapsedTime()<< " clocks\n";
         cout << "v1/v2 are "<< ((v1==v2)?"the same.\n":"different.\n");
@@ -43,7 +46,7 @@ void insertion_sort(vector<int>&v)
         clk.start();
         insertion_sort(v2);
         
-        cout << "insertion_sort(): "<<clk.getElapsedTime() << " clocks\n";
+        cout << "insertion_sort():   "<<clk.getElapsedTime() << " seconds\n";
         cout << "v1/v2 are "<< ((v1==v2)?"the same.\n":"different.\n");
         
         return 0;
